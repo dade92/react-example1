@@ -8,7 +8,9 @@ export const Book = (props) => {
       console.log(e.target)
     }
     return (
-    <article className='book'>
+    <article className='book' onMouseOver={() => {
+      console.log(title)
+    }}>
       <img src={img} alt=''/>
       <h1 onClick={()=>console.log(title)}>{title}</h1>
       <h4 style={{color:'#617d98', fontSize:'0.75rem', marginTop:'0.25rem'}}>
