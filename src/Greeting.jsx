@@ -1,3 +1,5 @@
+import React from 'react'
+
 // REACT COMPONENTS RULES
 // stateless functional component
 // ALWAYS return JSX
