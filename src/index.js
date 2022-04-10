@@ -7,12 +7,14 @@ const books = [
   {
     img : 'https://images-na.ssl-images-amazon.com/images/I/71PmVNpXSUL._UX300__PJku-headphones-v1,TopRight,0,-50_AC_UL381_SR381,381_.jpg',
     title: 'My evil mother',
-    author: 'Margaret Atwood'
+    author: 'Margaret Atwood',
+    rating: 4
   },
   {
     img : 'https://m.media-amazon.com/images/I/41ya6frLgGL.jpg',
     title: 'Strangers We Know',
-    author: 'Elle Marr'
+    author: 'Elle Marr',
+    rating: 3
   }
 ]
 
@@ -21,7 +23,6 @@ function BookList() {
   return (
     <section className='booklist'> 
       {books.map((book) => {
-            const {img, title, author} = book;
             return (
               <Book book={book}></Book>
             )
@@ -32,7 +33,7 @@ function BookList() {
 }
 
 const Book = (props) => {
-  const {img, title, author} = props.book;
+  const {img, title, author, rating} = props.book;
   return (
   <article className='book'>
     <img src={img} alt=''/>
@@ -40,6 +41,7 @@ const Book = (props) => {
     <h4 style={{color:'#617d98', fontSize:'0.75rem', marginTop:'0.25rem'}}>
       {author.toUpperCase()}
     </h4>
+    <h4>Rating: {rating}</h4>
   </article>
   )
 }
