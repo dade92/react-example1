@@ -2,9 +2,6 @@ import React from 'react'
 
 const Book = (props) => {
     const {img, title, author, rating, description} = props.book;
-    const complex = (author) => {
-        console.log(author)
-    }
     const click = (title, author) => {
         console.log(author + ":" + title)
     }

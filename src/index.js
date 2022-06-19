@@ -1,22 +1,18 @@
 import React from 'react'
 import ReactDom from 'react-dom'
-import SpecificBook  from './Book'
+import Book  from './Book'
 import { books } from './Books'
 
 //CSS
 import './index.css';
 
-function BookList() {
-  return (
-    <section className='booklist'> 
+const BookList = () => <section className='booklist'> 
       {books.map((book) => {
             return (
-              <SpecificBook key={book.id} book={book}/>
+              <Book key={book.id} book={book}/>
             )
       })
       }
     </section>
-  );
-}
 
 ReactDom.render(<BookList/>, document.getElementById('root'));
